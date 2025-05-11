@@ -1,0 +1,9 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+futures-util = { version = "0.3.31", features = ["alloc"] }
+tokio = { version = "1.45.0", features = ["full"] }
+tokio-tungstenite = { version = "0.26.2", features = ["tokio-native-tls"] }
