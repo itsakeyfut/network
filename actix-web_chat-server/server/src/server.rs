@@ -241,4 +241,9 @@ impl ChatServer {
             queues.remove(user_id);
         }
     }
+
+    pub async fn get_room_list(&self) -> Vec<String> {
+        let rooms = self.rooms.read().await;
+        rooms.keys().cloned().collect()
+    }
 }
